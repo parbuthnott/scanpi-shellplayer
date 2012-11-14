@@ -6,7 +6,7 @@ echo "**********************************";
 
 choice=1;
 startdir=/mnt/2tb_USB_hard_disc;
-functdir=/mnt/2tb_USB_hard_disc/scanpi/shellplayer;
+functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
 
@@ -22,6 +22,10 @@ echo "* Randomizing...                 *";
 echo "**********************************";
 sort -R $functdir/allmusic.txt > $functdir/allmusicrandom.txt;
 
+chmod 775 $functdir/allmusic.txt;
+chmod 775 $functdir/allmusicrandom.txt;
+sudo chown www-data:www-pub $functdir/allmusic.txt;
+sudo chown www-data:www-pub $functdir/allmusicrandom.txt;
 echo "**********************************";
 echo "* Created allmusicrandom.txt     *";
 echo "**********************************";

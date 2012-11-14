@@ -6,7 +6,7 @@ echo "**********************************";
 
 choice=1;
 startdir=/mnt/2tb_USB_hard_disc/p_music;
-functdir=/mnt/2tb_USB_hard_disc/scanpi/shellplayer;
+functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
 

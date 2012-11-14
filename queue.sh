@@ -5,7 +5,7 @@ echo "** queue.sh STARTING ...        **";
 echo "**********************************";
 
 startdir=/mnt/2tb_USB_hard_disc/p_music;
-functdir=/mnt/2tb_USB_hard_disc/scanpi/shellplayer;
+functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
 
@@ -29,6 +29,8 @@ echo "$whole" > $queuedir/$timestamp
 
 if [ -s $queuedir/$timestamp ]
 then 
+	chmod 775 $queuedir/$timestamp;
+	sudo chown www-data:www-pub $queuedir/$timestamp;
 	echo "**********************************";
 	echo "* Item Queued.                   *";
 	echo "**********************************";

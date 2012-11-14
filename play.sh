@@ -6,14 +6,14 @@ echo "**********************************";
 
 choice=1;
 startdir=/mnt/2tb_USB_hard_disc/p_music;
-functdir=/mnt/2tb_USB_hard_disc/scanpi/shellplayer;
+functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
 
 while [ $choice -ne 0 ]
 do
 
-	if stat --printf='' /mnt/2tb_USB_hard_disc/scanpi/shellplayer/queue/* 2>/dev/null
+	if stat --printf='' $queuedir/* 2>/dev/null
 	then
 		echo "**********************************";
 		echo "* Files exist in queue...        *";

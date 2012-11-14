@@ -6,9 +6,15 @@ echo "**********************************";
 
 choice=1;
 startdir=/mnt/2tb_USB_hard_disc/p_music;
-functdir=/mnt/2tb_USB_hard_disc/scanpi/shellplayer;
+functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
+
+# run a ps -ef | grep mpg123
+# head it to get the first one
+# kill the 'main' process (not the mpg123 one)
+# then kill the mpg123 process
+# or volume down, kill, volume up
 
 # e.g.
 # pi@raspberrypi ~ $ ps -ef | grep mpg123
@@ -16,20 +22,15 @@ playeddir=$functdir/played;
 # pi       13382 13371  1 14:40 pts/1    00:00:00 grep --color=auto mpg123
 # pi@raspberrypi ~ $ kill 13046
 
-# kill the 'main' process (not the mpg123 one)
 processtokill=`ps -ef | grep mpg123 | awk '{print $3}' | head -n 1`;
+mpgprocesstokill=`ps -ef | grep mpg123 | awk '{print $2}' | head -n 1`;
 echo "**********************************";
 echo "* Main process ... $processtokill          *";
 echo "**********************************";
 kill $processtokill;
-
-# then kill the mpg123 process
-mpgprocesstokill=`ps -ef | grep mpg123 | awk '{print $2}' | head -n 1`;
 echo "**********************************";
 echo "* MPG123 process ... $mpgprocesstokill  *";
 echo "**********************************";
-
-# or volume down, kill, volume up ??
 kill -stop $mpgprocesstokill;
 echo -n "PAUSED... ";
 kill $mpgprocesstokill;
