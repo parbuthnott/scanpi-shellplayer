@@ -30,7 +30,7 @@ echo "$whole" > $queuedir/$timestamp
 if [ -s $queuedir/$timestamp ]
 then 
 	chmod 775 $queuedir/$timestamp;
-	sudo chown www-data:www-pub $queuedir/$timestamp;
+	# chown pi:www-pub $queuedir/$timestamp;
 	echo "**********************************";
 	echo "* Item Queued.                   *";
 	echo "**********************************";

@@ -95,10 +95,11 @@ do
 		echo "**********************************";
 		echo "* Play another? 1=yes, 0=no.     *";
 		echo "**********************************";
-		read choice;
+		read choice
 	else
 		echo "**********************************";
 		echo "* Multiplay mode...              *";
 		echo "**********************************";
+		choice=$1
 	fi
 done
