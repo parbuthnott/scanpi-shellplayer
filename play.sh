@@ -88,7 +88,7 @@ do
 	echo "**********************************";
 	echo "* Calling MPG123 to play file... *";
 	echo "**********************************";
-	mpg123 "$filetoplay"
+	/usr/bin/mpg123 "$filetoplay"
 
 	if test $# -lt 1
 	then

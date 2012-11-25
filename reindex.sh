@@ -22,10 +22,10 @@ echo "* Randomizing...                 *";
 echo "**********************************";
 sort -R $functdir/allmusic.txt > $functdir/allmusicrandom.txt;
 
-chmod 775 $functdir/allmusic.txt;
-chmod 775 $functdir/allmusicrandom.txt;
-sudo chown www-data:www-pub $functdir/allmusic.txt;
-sudo chown www-data:www-pub $functdir/allmusicrandom.txt;
+# chmod 775 $functdir/allmusic.txt;
+# chmod 775 $functdir/allmusicrandom.txt;
+# sudo chown www-data:www-pub $functdir/allmusic.txt;
+# sudo chown www-data:www-pub $functdir/allmusicrandom.txt;
 echo "**********************************";
 echo "* Created allmusicrandom.txt     *";
 echo "**********************************";

@@ -21,7 +21,8 @@ playeddir=$functdir/played;
 # pi       13382 13371  1 14:40 pts/1    00:00:00 grep --color=auto mpg123
 # pi@raspberrypi ~ $ kill 13359
 
-processtokill=`ps -ef | grep mpg123 | awk '{print $2}' | head -n 1`;
+# processtokill=`ps -ef | grep mpg123 | awk '{print $2}' | head -n 1`;
+processtokill=`ps -e | grep mpg123 | awk '{print $1}' | head -n 1`;
 echo "**********************************";
 echo "* Found Process ... killing $processtokill *";
 echo "**********************************";
