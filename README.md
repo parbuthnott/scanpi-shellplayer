@@ -1,7 +1,8 @@
 # This is the README for scanpi shellplayer
-# shellplayer comprises 8 shell functions;
+# shellplayer comprises 9 shell functions;
 # album.sh - a function to 'queue' an albums worth of music
 # band.sh - a function to 'queue' all of one band or artists music
+# go.sh - a function to nohup and loop the play function
 # exit.sh - a function to stop playback and cancel the main play process
 # play.sh - the main 'play' process
 # queue.sh - a function to add a single track to the queue
