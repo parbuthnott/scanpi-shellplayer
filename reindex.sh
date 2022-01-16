@@ -5,7 +5,7 @@ echo "** reindex.sh STARTING ...      **";
 echo "**********************************";
 
 choice=1;
-startdir=/mnt/2tb_USB_hard_disc;
+startdir=/mnt/2tb_USB_hard_disc/p_music;
 functdir=/mnt/scanpi/shellplayer;
 queuedir=$functdir/queue;
 playeddir=$functdir/played;
